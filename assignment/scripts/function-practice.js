@@ -18,7 +18,7 @@ function helloName( name ) {
   return name;
 }
 // Remember to call the function to test
-console.log(helloName('whoever name it is'))
+console.log(helloName('Hello Jo!'))
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber,secondNumber ) {
@@ -52,16 +52,14 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-let winter = ['snow', 'ice', 'cold']
-function lastItem (winter) {
-  if (winter.length>0) {
-    return [winter.length - 1]
-  }
-  else {
-    return 'undefined'
-  }
+function getLast( array ) {
+  let lastItem = array.length-1;
+  return array[lastItem];
 }
-console.log(lastItem(winter));
+
+console.log(getLast(['Winter', 'Cold', 'Ice', 'Snow']));
+console.log(getLast(['Winter', 'Cold', 'Ice']));
+console.log(getLast([]));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
